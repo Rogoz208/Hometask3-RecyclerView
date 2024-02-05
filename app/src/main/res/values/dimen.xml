@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Margins-->
+    <dimen name="double_margin">16dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="half_margin">4dp</dimen>
+
+    <!--    Paddings-->
+    <dimen name="double_padding">16dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="half_padding">4dp</dimen>
+
+    <!--    Text size-->
+    <dimen name="large_text_size">18sp</dimen>
+    <dimen name="medium_text_size">16sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+
+
+    <!--    CardView-->
+    <dimen name="default_elevation">8dp</dimen>
+    <dimen name="corner_radius">16dp</dimen>
+    <dimen name="card_view_height">64dp</dimen>
+</resources>

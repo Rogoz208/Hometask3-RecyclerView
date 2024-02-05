@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_view_height"
+        android:layout_margin="@dimen/half_margin"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="@dimen/default_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/double_padding">
+
+            <CheckBox
+                android:id="@+id/is_selected_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:maxLines="1"
+                android:textSize="@dimen/medium_text_size"
+                android:textStyle="normal"
+                tools:text="Имя Фамилия" />
+
+            <TextView
+                android:id="@+id/phone_number_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:maxLines="1"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/medium_text_size"
+                android:textStyle="normal"
+                tools:text="+79541231212" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>
