@@ -85,7 +85,11 @@ class ContactsListFragment : Fragment(R.layout.fragment_contacts_list) {
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 when (menuItem.itemId) {
                     R.id.delete_menu_item -> {
-                        toggleSelectionMode()
+                        if (isSelectionMode) {
+                            deleteNotes()
+                        } else {
+                            toggleSelectionMode()
+                        }
                         return true
                     }
                 }
@@ -97,8 +101,7 @@ class ContactsListFragment : Fragment(R.layout.fragment_contacts_list) {
     private fun initButtons() {
         binding.deleteButton.setOnClickListener {
             if (isSelectionMode) {
-                val selectedItems = adapter.getSelectedItems()
-                viewModel.onDeleteMultipleContacts(selectedItems)
+                deleteNotes()
             }
         }
 
@@ -109,6 +112,11 @@ class ContactsListFragment : Fragment(R.layout.fragment_contacts_list) {
         binding.addButton.setOnClickListener {
             openEditContactScreen(null, null)
         }
+    }
+
+    private fun deleteNotes() {
+        val selectedItems = adapter.getSelectedItems()
+        viewModel.onDeleteMultipleContacts(selectedItems)
     }
 
     private fun toggleSelectionMode() {
